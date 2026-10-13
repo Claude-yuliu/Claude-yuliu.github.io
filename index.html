@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="Yu (Claude) Liu is a Computer Science Ph.D. student at UMBC, researching computer graphics, physics simulation, and character animation.">
+  <title>Yu (Claude) Liu · Computer Graphics &amp; Motion</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="masthead">
+      <div>
+        <h1 id="profile-name">Yu (Claude) Liu</h1>
+        <p class="eyebrow" id="profile-tagline">Computer graphics · Physics · Motion</p>
+      </div>
+      <div class="masthead-art" aria-hidden="true">
+        <svg viewBox="0 0 170 110" class="paper-collage">
+          <path fill="#e9dfcc" d="M23 36 145 23 143 40 149 54 143 66 149 86 48 96 45 78 30 72Z"/>
+          <path fill="#8c987c" d="m9 29 30-5 17-10 18 1 14-8 30 1-5 16-13 9-4 16-22 8-12 16-23 1-11 10-12-2 1-19-7-11Z"/>
+          <circle fill="#c97651" cx="124" cy="71" r="25"/>
+          <path d="m110 57 17 26m-20-6 27-15" fill="none" stroke="#f7f4ed" stroke-width=".6" opacity=".7"/>
+        </svg>
+        <p class="handwritten">simulating a<br>more physical world<span class="ink-line"></span></p>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="intro" aria-label="About Yu Liu">
+        <figure class="portrait">
+          <div class="portrait-mat">
+            <img id="profile-photo" src="assets/photo.jpeg" alt="Portrait of Yu (Claude) Liu" width="849" height="1657" fetchpriority="high">
+            <span class="portrait-tape" aria-hidden="true"></span>
+          </div>
+          <figcaption><span>Yu (Claude) Liu</span><span class="caption-mark" aria-hidden="true">↗</span></figcaption>
+        </figure>
+        <div class="intro-copy">
+          <div id="biography"></div>
+          <nav id="profile-links" class="profile-links" aria-label="Professional profiles"></nav>
+          <p class="contact"><a id="email-link" href="mailto:yul2@umbc.edu">yul2@umbc.edu</a><span> · </span><span id="profile-location">Baltimore, Maryland</span></p>
+          <svg class="botanical" viewBox="0 0 130 150" aria-hidden="true">
+            <circle cx="44" cy="89" r="28" fill="#e7bd6c" opacity=".6"/>
+            <g fill="#8c987c" opacity=".85">
+              <path d="M68 88Q40 59 49 22 69 46 68 88Z"/>
+              <path d="M73 73Q78 29 110 13 104 44 73 73Z"/>
+              <path d="M62 110Q69 81 107 74 94 99 62 110Z"/>
+            </g>
+            <g stroke="#56654d" stroke-width="1" fill="none"><path d="M37 139Q70 84 97 33"/><path d="m67 87-14-48m11 68 29-24"/></g>
+            <g fill="#c97651"><circle cx="14" cy="65" r="1.5"/><circle cx="20" cy="113" r="1"/><circle cx="111" cy="121" r="1.5"/></g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="news-section" aria-labelledby="news-heading">
+        <div class="section-heading">
+          <h2 id="news-heading">News</h2>
+          <div class="news-controls" id="news-controls" hidden>
+            <span class="scroll-label">A few recent notes</span>
+            <button type="button" id="news-up" aria-label="Scroll to earlier news items" aria-controls="news-list">↑</button>
+            <button type="button" id="news-down" aria-label="Scroll to later news items" aria-controls="news-list">↓</button>
+          </div>
+        </div>
+        <div class="news-window" id="news-window" role="region" aria-labelledby="news-heading" tabindex="0">
+          <ol class="news-list" id="news-list"></ol>
+        </div>
+      </section>
+
+      <section class="publications-section" aria-labelledby="publications-heading">
+        <div class="section-heading"><h2 id="publications-heading">Publications</h2><span class="section-note">Research, in print</span></div>
+        <div id="publications" class="publications"></div>
+      </section>
+      <noscript>
+        <p>I am a Ph.D. student in Computer Science at the University of Maryland, Baltimore County, advised by Dr. Adam Bargteil. My research focuses on computer graphics, physics simulation, and character animation.</p>
+        <p>For my publications and background, visit <a href="https://scholar.google.com/citations?user=2zFCd6QAAAAJ&amp;hl=en">Google Scholar</a>, <a href="assets/Yu_Liu_CV.pdf">my CV</a>, or <a href="https://github.com/Claude-yuliu">GitHub</a>.</p>
+      </noscript>
+    </main>
+
+    <footer>
+      <p>Yu (Claude) Liu <span aria-hidden="true">/</span> <span id="footer-affiliation">University of Maryland, Baltimore County</span></p>
+      <a href="#top" id="back-to-top">Back to top ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
