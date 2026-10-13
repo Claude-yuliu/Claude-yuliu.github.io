@@ -1,8 +1,9 @@
 # Yu (Claude) Liu
 
 A responsive, buildless personal website for GitHub Pages. The design follows
-`generated_layout.png`: warm paper, sage and terracotta collage details, serif
-headings, a real portrait, news, and publications.
+`generated_layout.png`, refined into a cleaner academic layout with a warm
+background, subtle sage and terracotta accents, bold serif headings, a compact
+portrait, news, and publication covers.
 
 ## Update the website
 
@@ -15,8 +16,9 @@ headings, a real portrait, news, and publications.
   its date. The news panel scrolls as entries accumulate, with keyboard and
   button controls. It does not move automatically.
 - **Publications:** copy a publication object, then change its title, authors,
-  venue, image, and links. Omit `image` or `note` if you do not need them. Images
-  included here are original decorative SVG illustrations, not paper figures.
+  venue, image, and links. Covers are in `assets/covers/` and are displayed
+  without cropping. Use `imageAlt` for a description and `imageWidth` and
+  `imageHeight` for the image's original dimensions. Omit `image` if unneeded.
 - **Appearance:** edit `styles.css`. Shared colors are at the top of the file.
 
 Example news entry:
@@ -36,8 +38,10 @@ Example publication:
   title: "Paper title",
   authors: ["Yu Liu", "Coauthor Name"],
   venue: "Conference · 2027",
-  image: "assets/your-thumbnail.jpg",
-  note: "a short\nmargin note",
+  image: "assets/covers/your-thumbnail.jpg",
+  imageAlt: "A brief description of the publication cover",
+  imageWidth: 600,
+  imageHeight: 400,
   links: [
     { label: "Paper", url: "https://doi.org/your-doi" },
     { label: "Code", url: "https://github.com/your-repository" }

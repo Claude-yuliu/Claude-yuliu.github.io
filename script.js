@@ -25,7 +25,6 @@
   byId("profile-tagline").textContent = profile.tagline;
   byId("profile-photo").src = profile.photo;
   byId("profile-photo").alt = `Portrait of ${profile.name}`;
-  document.querySelector(".portrait figcaption span").textContent = profile.name;
   byId("profile-location").textContent = profile.location;
   byId("footer-affiliation").textContent = profile.affiliation;
   byId("email-link").href = `mailto:${profile.email}`;
@@ -45,19 +44,18 @@
     byId("news-list").append(row);
   });
 
-  content.publications.forEach((paper, index) => {
+  content.publications.forEach((paper) => {
     const article = element("article", "publication");
     const art = element("div", "publication-art");
     if (paper.image) {
       const image = element("img");
       image.src = paper.image;
-      image.alt = ""; // Decorative collage; the title conveys the paper's subject.
-      image.width = 560;
-      image.height = 320;
+      image.alt = paper.imageAlt || "";
+      image.width = paper.imageWidth || 560;
+      image.height = paper.imageHeight || 320;
       image.loading = "lazy";
       art.append(image);
     }
-    art.append(element("span", "art-index", String(index + 1).padStart(2, "0")));
     const details = element("div", "publication-details");
     details.append(element("p", "venue", paper.venue), element("h3", "", paper.title));
     const authors = element("p", "authors");
@@ -76,12 +74,6 @@
     });
     details.append(authors, links);
     article.append(art, details);
-    if (paper.note) {
-      const note = element("p", "publication-note handwritten", paper.note);
-      note.setAttribute("aria-hidden", "true");
-      note.append(element("span", "ink-line"));
-      article.append(note);
-    }
     byId("publications").append(article);
   });
 

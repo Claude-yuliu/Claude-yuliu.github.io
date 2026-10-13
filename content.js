@@ -36,22 +36,26 @@ window.siteContent = {
     }
   ],
   // To add a paper, copy an object below. Additional links can be Paper, Code,
-  // Project, Video, etc. Illustrations below are decorative, not paper figures.
+  // Project, Video, etc. Cover images are displayed in full without cropping.
   publications: [
     {
       title: "When to Explain: Modeling User Need for Explanations in Real-World Autonomous Driving",
       authors: ["Shihong Ling", "Yaohan Ding", "Yu Liu", "Yue Wan", "Xiaowei Jia", "Na Du"],
       venue: "CHI 2026",
-      image: "assets/driving-scene.svg",
-      note: "human-centered\nautonomous\ndriving",
+      image: "assets/covers/when2explain.png",
+      imageAlt: "Annotated driving scene highlighting a vehicle action and an upcoming red traffic light.",
+      imageWidth: 489,
+      imageHeight: 316,
       links: [{ label: "Paper", url: "https://doi.org/10.1145/3772318.3791778" }]
     },
     {
       title: "How Humans Naturally Refer to Targets: Understanding Multimodal Instruction Patterns in Human–Robot Interaction",
       authors: ["Lesong Jia", "Makayla Chang", "Yu Liu", "Na Du"],
       venue: "CHI 2026",
-      image: "assets/interaction-scene.svg",
-      note: "gesture, gaze\n& shared\nunderstanding",
+      image: "assets/covers/howHumanRefer2target.png",
+      imageAlt: "A person points toward a target while interacting with a robot in a room.",
+      imageWidth: 461,
+      imageHeight: 306,
       links: [{ label: "Paper", url: "https://doi.org/10.1145/3772318.3790946" }]
     }
   ]

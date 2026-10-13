@@ -14,7 +14,7 @@
 html { scroll-behavior: smooth; scroll-padding-top: 24px; }
 body {
   margin: 0;
-  background: var(--paper) url("assets/paper-texture.svg") repeat;
+  background: var(--paper);
   color: var(--body);
   font-size: 17px;
   line-height: 1.65;
@@ -24,7 +24,7 @@ body::before {
   content: "";
   position: absolute;
   inset: 0 0 auto;
-  height: 6px;
+  height: 3px;
   background: linear-gradient(90deg, #8c987c 0 65%, #c97651 65% 83%, #e5be75 83%);
 }
 a { color: inherit; text-underline-offset: 5px; }
@@ -40,33 +40,24 @@ button:disabled { opacity: .3; cursor: default; }
 .page { max-width: 1120px; margin: 0 auto; padding: 52px 48px 28px; }
 .masthead { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 27px; border-bottom: 2px solid var(--rule); }
 h1, h2, h3, .ink-link { font-family: Georgia, "Times New Roman", serif; color: var(--ink); }
-h1 { margin: 0; font-size: clamp(38px, 5.3vw, 60px); font-weight: 500; line-height: 1.1; letter-spacing: -2px; }
-.eyebrow { margin: 12px 0 0; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; }
-.masthead-art { display: flex; align-items: center; flex-shrink: 0; gap: 4px; }
-.paper-collage { width: 135px; height: 100px; transform: rotate(-5deg); }
-.handwritten { font-family: "Segoe Print", "Bradley Hand", "URW Chancery L", cursive; font-style: italic; font-size: 16px; letter-spacing: 1px; line-height: 1.45; color: var(--muted); transform: rotate(-8deg); }
-.masthead-art p { margin: 0; }
-.ink-line { display: block; width: 42px; height: 1px; margin: 12px 0 0 18px; background: currentColor; transform: rotate(-9deg); }
-.intro { display: grid; grid-template-columns: 295px minmax(0, 1fr); align-items: start; gap: 52px; margin: 40px 0 58px; }
+h1 { margin: 0; font-size: clamp(38px, 5.3vw, 60px); font-weight: 700; line-height: 1.1; letter-spacing: -2px; }
+.eyebrow { margin: 12px 0 0; font-size: 12px; letter-spacing: 2.4px; text-transform: uppercase; }
+.masthead-art { display: flex; align-items: center; flex-shrink: 0; }
+.paper-collage { display: block; width: 90px; height: 65px; }
+.intro { display: grid; grid-template-columns: 240px minmax(0, 1fr); align-items: start; gap: 48px; margin: 40px 0 50px; }
 .portrait { margin: 0; }
-.portrait-mat { position: relative; padding: 11px; background: #e8decb url("assets/paper-texture.svg"); border-radius: 24px 20px 22px 17px; transform: rotate(-1.2deg); }
-.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 22%; border-radius: 16px 12px 14px 10px; filter: saturate(.78); }
-.portrait-tape { position: absolute; width: 93px; height: 25px; top: -9px; left: calc(50% - 46px); background: #dad9c0; opacity: .7; transform: rotate(5deg); clip-path: polygon(2% 3%, 98% 0, 96% 26%, 100% 53%, 97% 98%, 1% 96%, 3% 71%, 0 44%); }
-figcaption { display: flex; justify-content: space-between; padding: 12px 9px 0; font-family: "Courier New", monospace; font-size: 12px; letter-spacing: 1px; color: var(--muted); }
-.caption-mark { color: var(--terracotta); font-size: 20px; line-height: 1; }
-.intro-copy { position: relative; padding-top: 8px; }
+.portrait-mat { padding: 5px; background: #fff; border: 1px solid #d8dcd2; border-radius: 8px; }
+.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 22%; border-radius: 4px; }
+.intro-copy { padding-top: 0; }
 #biography p { margin: 0 0 22px; font-size: 19px; line-height: 1.65; }
-.profile-links { display: flex; flex-wrap: wrap; gap: 16px 32px; margin-top: 32px; padding-right: 35px; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 16px 32px; margin-top: 28px; }
 .ink-link { display: inline-block; font-size: 24px; line-height: 1.3; font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--sage); padding-bottom: 3px; transition: color .15s, border-color .15s; }
 .ink-link:hover { border-color: var(--terracotta); }
 .contact { font-size: 13px; margin: 18px 0 0; color: var(--muted); }
 .contact a { text-decoration-thickness: 1px; }
-.botanical { position: absolute; right: -25px; bottom: -78px; width: 90px; height: 110px; z-index: -1; }
 .section-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1.5px solid var(--rule); padding-bottom: 9px; margin-bottom: 21px; }
-h2 { margin: 0; font-size: 40px; line-height: 1.2; font-weight: 500; letter-spacing: -1px; }
+h2 { margin: 0; font-size: 40px; line-height: 1.2; font-weight: 700; letter-spacing: -1px; }
 .news-controls { display: flex; align-items: center; gap: 8px; }
-.scroll-label, .section-note { font-family: "Courier New", monospace; font-size: 11px; color: var(--muted); letter-spacing: .5px; }
-.scroll-label { margin-right: 6px; }
 .news-controls button { width: 30px; height: 30px; border: 1px solid #8e9989; border-radius: 50%; background: transparent; color: var(--ink); line-height: 1; cursor: pointer; }
 .news-controls button:hover:not(:disabled) { background: #e4e8da; }
 .news-window { max-height: 155px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #8c987c #e9e6dc; padding: 0 15px 0 4px; overscroll-behavior-y: contain; }
@@ -77,10 +68,9 @@ h2 { margin: 0; font-size: 40px; line-height: 1.2; font-weight: 500; letter-spac
 .text-link { color: var(--sage); text-decoration-thickness: 1px; white-space: normal; }
 .news-section { margin-bottom: 48px; }
 .publications { display: grid; gap: 32px; }
-.publication { display: grid; grid-template-columns: 295px minmax(0, 1fr) 90px; gap: 28px; align-items: center; }
-.publication-art { position: relative; border-radius: 18px 14px 17px 12px; background: #e9dfcc; overflow: hidden; }
-.publication-art img { display: block; width: 100%; height: auto; aspect-ratio: 7 / 4; object-fit: cover; }
-.art-index { position: absolute; bottom: 8px; left: 13px; font-family: "Courier New", monospace; font-size: 11px; color: #324a40; }
+.publication { display: grid; grid-template-columns: 295px minmax(0, 1fr); gap: 32px; align-items: center; }
+.publication-art { border: 1px solid #d8dcd2; border-radius: 6px; background: #fff; overflow: hidden; }
+.publication-art img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
 .venue { margin: 0 0 6px; font-family: "Courier New", monospace; color: var(--sage); font-size: 12px; letter-spacing: 1px; }
 h3 { font-size: 22px; line-height: 1.35; font-weight: 600; margin: 0 0 10px; }
 .authors { font-size: 14px; line-height: 1.7; color: var(--muted); margin: 0 0 14px; }
@@ -88,37 +78,30 @@ h3 { font-size: 22px; line-height: 1.35; font-weight: 600; margin: 0 0 10px; }
 .paper-links { display: flex; flex-wrap: wrap; gap: 18px; }
 .paper-links .ink-link { font-family: inherit; font-weight: 400; font-size: 17px; }
 .link-arrow { margin-left: 7px; }
-.publication-note { font-size: 14px; white-space: pre-line; margin: 0; }
 footer { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; border-top: 1px solid #bec3b4; margin-top: 62px; padding-top: 17px; font-size: 11px; color: var(--muted); }
 footer p { margin: 0; }
 footer p > span:first-child { padding: 0 8px; color: var(--terracotta); }
 footer a { white-space: nowrap; text-decoration: none; }
 @media (max-width: 1000px) {
   .page { padding: 40px 32px 24px; }
-  .masthead-art { gap: 0; }
-  .paper-collage { width: 110px; }
-  .masthead-art .handwritten { font-size: 13px; }
-  .intro { grid-template-columns: 255px minmax(0, 1fr); gap: 36px; }
+  .intro { grid-template-columns: 220px minmax(0, 1fr); gap: 36px; }
   #biography p { font-size: 17px; }
   .publication { grid-template-columns: 255px minmax(0, 1fr); gap: 26px; }
-  .publication-note { display: none; }
   .profile-links { gap: 16px 22px; padding-right: 0; }
   .ink-link { font-size: 22px; }
 }
 @media (max-width: 740px) {
   .page { padding: 35px 24px 24px; }
   .masthead { gap: 8px; padding-bottom: 22px; }
-  .masthead-art .handwritten { display: none; }
-  .paper-collage { width: 82px; height: 80px; }
+  .paper-collage { width: 68px; height: 48px; }
   h1 { font-size: 42px; }
   .eyebrow { letter-spacing: 1.8px; font-size: 10px; }
-  .intro { grid-template-columns: 190px minmax(0, 1fr); gap: 26px; margin-top: 32px; }
+  .intro { grid-template-columns: 170px minmax(0, 1fr); gap: 26px; margin-top: 32px; }
   #biography p { font-size: 16px; }
   .intro-copy { padding: 0; }
   .profile-links { margin-top: 24px; gap: 12px 20px; }
   .ink-link { font-size: 21px; }
   .contact { font-size: 12px; }
-  .botanical { display: none; }
   .publication { grid-template-columns: 210px minmax(0, 1fr); gap: 22px; align-items: start; }
   h3 { font-size: 20px; }
   .authors { font-size: 13px; }
@@ -129,13 +112,11 @@ footer a { white-space: nowrap; text-decoration: none; }
   .masthead-art { display: none; }
   .eyebrow { font-size: 9px; letter-spacing: 1.8px; }
   .intro { grid-template-columns: 1fr; gap: 24px; margin: 30px 0 38px; }
-  .portrait { width: min(255px, 85%); justify-self: center; }
-  .portrait img { aspect-ratio: 4 / 4.5; }
+  .portrait { width: min(205px, 80%); justify-self: center; }
   #biography p { font-size: 17px; margin-bottom: 18px; }
   .profile-links { gap: 18px 26px; }
   .contact { margin-top: 16px; }
   h2 { font-size: 34px; }
-  .section-note, .scroll-label { display: none; }
   .news-item { grid-template-columns: 75px minmax(0, 1fr); gap: 12px; }
   .news-date { font-size: 12px; }
   .news-item p { font-size: 15px; }
@@ -156,7 +137,7 @@ footer a { white-space: nowrap; text-decoration: none; }
 @media print {
   body { background: white; font-size: 11pt; }
   .page { padding: 0; }
-  .skip-link, .masthead-art, .news-controls, .botanical, #back-to-top { display: none !important; }
+  .skip-link, .masthead-art, .news-controls, #back-to-top { display: none !important; }
   .intro { margin: 24px 0; }
   .news-window { max-height: none; overflow: visible; }
   .publication { break-inside: avoid; }
